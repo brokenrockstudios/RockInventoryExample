@@ -20,6 +20,10 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "RockInventory",
+			"Enabled": true
 		}
 	]
 }

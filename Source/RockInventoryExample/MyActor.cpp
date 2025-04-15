@@ -1,7 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright Broken Rock Studios LLC. All Rights Reserved.
 
 
 #include "MyActor.h"
+
+#include "Engine/AssetManager.h"
 
 // Sets default values
 AMyActor::AMyActor()
@@ -15,7 +17,10 @@ AMyActor::AMyActor()
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	TArray<FPrimaryAssetId> AssetListOut;
+	UAssetManager::Get().GetPrimaryAssetIdList(FPrimaryAssetType("RockItemDefinition"), AssetListOut);
+	UE_LOG(LogTemp, Warning, TEXT("Foundzz %d RockItem assets."), AssetListOut.Num());
 }
 
 // Called every frame

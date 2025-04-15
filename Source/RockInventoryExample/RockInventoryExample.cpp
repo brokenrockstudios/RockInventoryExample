@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright Broken Rock Studios LLC. All Rights Reserved.
 
 #include "RockInventoryExample.h"
 #include "Modules/ModuleManager.h"
