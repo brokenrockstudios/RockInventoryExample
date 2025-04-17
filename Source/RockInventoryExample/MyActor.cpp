@@ -4,6 +4,7 @@
 #include "MyActor.h"
 
 #include "Engine/AssetManager.h"
+#include "Item/ItemRegistry/RockItemDefinitionRegistry.h"
 
 // Sets default values
 AMyActor::AMyActor()
@@ -21,6 +22,14 @@ void AMyActor::BeginPlay()
 	TArray<FPrimaryAssetId> AssetListOut;
 	UAssetManager::Get().GetPrimaryAssetIdList(FPrimaryAssetType("RockItemDefinition"), AssetListOut);
 	UE_LOG(LogTemp, Warning, TEXT("Foundzz %d RockItem assets."), AssetListOut.Num());
+
+	// delay 5 seconds then call BuildRegistry on the rock item registry
+	//FTimerHandle TimerHandle;
+	//GetWorld()->GetTimerManager().SetTimer(TimerHandle, [this]()
+	//{
+		//URockItemRegistrySubsystem::GetInstance()->BuildRegistry();
+	//}, 5.0f, false);
+	
 }
 
 // Called every frame
